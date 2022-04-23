@@ -42,6 +42,12 @@ return require 'packer'.startup(function()
     }
   }
 
+  -- lualine configuration
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
   -- Telescope file manager
   use {
     'nvim-telescope/telescope.nvim',
