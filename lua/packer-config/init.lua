@@ -26,7 +26,10 @@ return require 'packer'.startup(function()
   use "hrsh7th/cmp-buffer"  -- completion for buffer
   use "hrsh7th/cmp-path"  -- completion for file in the path
   use "hrsh7th/cmp-cmdline" -- command line completion 
-  use "hrsh7th/cmp-nvim-lsp" 
+  use "hrsh7th/cmp-nvim-lsp"
+
+  -- autoclose brackets
+  use "windwp/nvim-autopairs"
 
   -- treesitter
   use {
@@ -42,6 +45,14 @@ return require 'packer'.startup(function()
     }
   }
 
+  -- dashboad
+  use {
+    'goolord/alpha-nvim',
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.dashboard'.config)
+    end
+  }
+
   -- lualine configuration
   use {
     'nvim-lualine/lualine.nvim',
@@ -53,6 +64,12 @@ return require 'packer'.startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  -- Set up github copilot
+  use "github/copilot.vim"
+
+  -- tab bar
+  use "preservim/tagbar"
 
   -- color scheme
   use "nonetallt/vim-neon-dark"

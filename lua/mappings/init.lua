@@ -27,3 +27,6 @@ keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
 
 -- Nvimtree keybindings
 keymap('n', '<c-u>', ':NvimTreeToggle<CR>', opts)
+
+-- tagbar map
+keymap('n', '<c-a>', ':TagbarToggle<CR>', opts)
