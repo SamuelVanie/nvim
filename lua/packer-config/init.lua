@@ -48,6 +48,7 @@ return require 'packer'.startup(function()
   -- dashboad
   use {
     'goolord/alpha-nvim',
+    requires = {'kyazdani42/nvim-web-devicons'},
     config = function ()
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
@@ -68,7 +69,7 @@ return require 'packer'.startup(function()
   -- Set up github copilot
   use "github/copilot.vim"
 
-  -- tab bar
+  -- tag bar
   use "preservim/tagbar"
 
   -- color scheme
@@ -84,6 +85,14 @@ return require 'packer'.startup(function()
   -- LSP
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer" -- install the server much simpler
+
+  -- My terminal plugin
+  use "akinsho/toggleterm.nvim"
+
+  -- My debugger
+  use "mfussenegger/nvim-dap"
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} } -- ui mode for nvim-dap plugin
+  use 'leoluz/nvim-dap-go'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

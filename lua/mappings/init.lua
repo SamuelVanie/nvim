@@ -29,4 +29,10 @@ keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
 keymap('n', '<c-u>', ':NvimTreeToggle<CR>', opts)
 
 -- tagbar map
-keymap('n', '<c-a>', ':TagbarToggle<CR>', opts)
+keymap('n', '<c-t>', ':TagbarToggle<CR>', opts)
+
+-- insert mode goto beginning and end of line
+keymap('i', '<C-a>', '<ESC>I', {})
+keymap('i', '<C-e>', '<ESC>A', {})
+keymap('i', '<M-f>', '<ESC><Space>Wi', opts)
+keymap('i', '<M-b>', '<ESC>Bi', opts)

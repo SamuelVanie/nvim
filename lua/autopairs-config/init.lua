@@ -40,20 +40,6 @@ npairs.add_rules({
 })
 
 
--- you can do anything with regex +special key
--- example press tab to uppercase text:
--- press b1234s<tab> => B1234S1234S
-
-npairs.add_rules({
-  Rule("b%d%d%d%d%w$", "", "vim")
-    :use_regex(true,"<tab>")
-    :replace_endpair(function(opts)
-          return
-              opts.prev_char:sub(#opts.prev_char - 4,#opts.prev_char)
-              .."<esc>viwU"
-    end)
-})
-
 -- you can exclude filetypes
 npairs.add_rule(
   Rule("$$","$$")
