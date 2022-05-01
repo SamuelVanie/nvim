@@ -36,3 +36,6 @@ keymap('i', '<C-a>', '<ESC>I', {})
 keymap('i', '<C-e>', '<ESC>A', {})
 keymap('i', '<M-f>', '<ESC><Space>Wi', opts)
 keymap('i', '<M-b>', '<ESC>Bi', opts)
+
+-- ranger keybindings
+keymap('n', '<leader>w', ':RangerWorkingDirectory<CR>', opts)

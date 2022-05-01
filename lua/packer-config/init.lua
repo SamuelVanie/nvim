@@ -37,14 +37,6 @@ return require 'packer'.startup(function()
     run = ':TSUpdate'
   }
 
-  -- nvim tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    }
-  }
-
   -- dashboad
   use {
     'goolord/alpha-nvim',
@@ -82,12 +74,25 @@ return require 'packer'.startup(function()
   -- dev icons for nerdfont
   use 'kyazdani42/nvim-web-devicons'
 
+  -- vim surround
+  use 'tpope/vim-surround'
+
+  -- vim commentary
+  use 'b3nj5m1n/kommentary'
+
+  -- add some custom text object
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
+
   -- LSP
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer" -- install the server much simpler
 
   -- My terminal plugin
   use "akinsho/toggleterm.nvim"
+
+  -- ranger inside of vim
+  use 'francoiscabrol/ranger.vim' 
+  use 'rbgrouleff/bclose.vim' -- depedency for neovim
 
   -- My debugger
   use "mfussenegger/nvim-dap"

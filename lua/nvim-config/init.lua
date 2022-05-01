@@ -23,6 +23,7 @@ o.splitright = true
 wo.wrap = false
 wo.scrolloff = 5
 wo.number = true
+wo.relativenumber = true
 bo.fileencoding = 'utf-8'
 o.termguicolors = true
 
