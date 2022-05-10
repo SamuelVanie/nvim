@@ -1,4 +1,4 @@
-local keymap = vim.api.nvim_set_keymap    
+local keymap = vim.api.nvim_set_keymap 
      
 keymap('n','<c-s>', ':w<CR>', {})    
 keymap('n','<c-q>', ':q<CR>', {})    
@@ -17,16 +17,12 @@ keymap('n', '<m-j>', ':resize -2<CR>', opts)
 keymap('n', '<m-k>', ':resize +2<CR>', opts)    
 keymap('n', '<m-h>', ':vertical resize -2<CR>', opts)    
 keymap('n', '<m-l>', ':vertical resize +2<CR>', opts)    
-keymap('n', '<leader>t', '<c-w><c-v>:terminal<CR>', opts)
 
 -- Telescope keybindings
 keymap('n', '<c-p>', ':Telescope find_files<CR>', opts)
 keymap('n', '<leader>r', ':Telescope live_grep<CR>', opts)
 keymap('n', '<leader>b', ':Telescope buffers<CR>', opts)
 keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
-
--- Nvimtree keybindings
-keymap('n', '<c-u>', ':NvimTreeToggle<CR>', opts)
 
 -- tagbar map
 keymap('n', '<c-t>', ':TagbarToggle<CR>', opts)
@@ -37,5 +33,17 @@ keymap('i', '<C-e>', '<ESC>A', {})
 keymap('i', '<M-f>', '<ESC><Space>Wi', opts)
 keymap('i', '<M-b>', '<ESC>Bi', opts)
 
--- ranger keybindings
-keymap('n', '<leader>w', ':RangerWorkingDirectory<CR>', opts)
+-- ranger configuration
+keymap('n', '<leader>rr', ':RangerEdit<CR>', {})
+keymap('n', '<leader>rv', ':RangerVSplit<CR>', {})
+keymap('n', '<leader>rs', ':RangerSplit<CR>', {})
+keymap('n', '<leader>rt', ':RangerTab<CR>', {})
+keymap('n', '<leader>ri', ':RangerInsert<CR>', {})
+keymap('n', '<leader>ra', ':RangerAppend<CR>', {})
+keymap('n', '<leader>rc', ':set operatorfunc=RangerChangeOperator<CR>g@', {})
+keymap('n', '<leader>rd', ':RangerCD<CR>', {})
+keymap('n', '<leader>rld', ':RangerLCD<CR>', {})
+
+
+-- Nerdtree mappings configuration
+keymap('n', '<C-u>', ':NERDTreeToggle<CR>', {})

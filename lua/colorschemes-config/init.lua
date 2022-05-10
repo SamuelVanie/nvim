@@ -1,1 +1,1 @@
-vim.cmd "colorscheme neon-dark"
+vim.cmd "colorscheme gruvbox-material"

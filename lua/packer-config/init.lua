@@ -31,19 +31,13 @@ return require 'packer'.startup(function()
   -- autoclose brackets
   use "windwp/nvim-autopairs"
 
+  -- autoclose tag
+  use "windwp/nvim-ts-autotag"
+
   -- treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
-  }
-
-  -- dashboad
-  use {
-    'goolord/alpha-nvim',
-    requires = {'kyazdani42/nvim-web-devicons'},
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
   }
 
   -- lualine configuration
@@ -66,6 +60,8 @@ return require 'packer'.startup(function()
 
   -- color scheme
   use "nonetallt/vim-neon-dark"
+  use "sainnhe/gruvbox-material"
+  use "sainnhe/everforest"
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
@@ -90,14 +86,17 @@ return require 'packer'.startup(function()
   -- My terminal plugin
   use "akinsho/toggleterm.nvim"
 
-  -- ranger inside of vim
-  use 'francoiscabrol/ranger.vim' 
   use 'rbgrouleff/bclose.vim' -- depedency for neovim
 
   -- My debugger
   use "mfussenegger/nvim-dap"
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} } -- ui mode for nvim-dap plugin
   use 'leoluz/nvim-dap-go'
+
+  -- File manager
+  --use 'preservim/nerdtree'
+  use "rafaqz/ranger.vim"
+
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

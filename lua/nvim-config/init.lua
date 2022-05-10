@@ -8,10 +8,12 @@ local bo = vim.bo
 
 vim.g.mapleader = ' '
 
+bo.smartindent=true
+bo.tabstop = 2
+bo.softtabstop = 2
 bo.expandtab = true
 bo.shiftwidth = 2
-bo.softtabstop = 2
-
+o.smarttab=true
 
 o.ignorecase = true
 o.hlsearch = true
@@ -30,8 +32,6 @@ o.termguicolors = true
 o.clipboard = unnamedplus
 o.completeopt = menuone,noinsert,noselect
 o.guicursor=block
-bo.smartindent=true
-o.smarttab=true
-o.timeoutlen=160
+o.timeoutlen=200
 
 o.hidden = true
