@@ -33,17 +33,6 @@ keymap('i', '<C-e>', '<ESC>A', {})
 keymap('i', '<M-f>', '<ESC><Space>Wi', opts)
 keymap('i', '<M-b>', '<ESC>Bi', opts)
 
--- ranger configuration
-keymap('n', '<leader>rr', ':RangerEdit<CR>', {})
-keymap('n', '<leader>rv', ':RangerVSplit<CR>', {})
-keymap('n', '<leader>rs', ':RangerSplit<CR>', {})
-keymap('n', '<leader>rt', ':RangerTab<CR>', {})
-keymap('n', '<leader>ri', ':RangerInsert<CR>', {})
-keymap('n', '<leader>ra', ':RangerAppend<CR>', {})
-keymap('n', '<leader>rc', ':set operatorfunc=RangerChangeOperator<CR>g@', {})
-keymap('n', '<leader>rd', ':RangerCD<CR>', {})
-keymap('n', '<leader>rld', ':RangerLCD<CR>', {})
-
-
 -- Nerdtree mappings configuration
-keymap('n', '<C-u>', ':NERDTreeToggle<CR>', {})
+keymap('n', '<C-u>', ':NvimTreeToggle<CR>', {})
+keymap('n', '<leader>f', ':NvimTreeFindFile<CR>', {})

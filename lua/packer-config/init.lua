@@ -94,8 +94,12 @@ return require 'packer'.startup(function()
   use 'leoluz/nvim-dap-go'
 
   -- File manager
-  --use 'preservim/nerdtree'
-  use "rafaqz/ranger.vim"
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+    }
+  }
 
 
   if PACKER_BOOTSTRAP then
