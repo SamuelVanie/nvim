@@ -62,6 +62,7 @@ return require 'packer'.startup(function()
   use "nonetallt/vim-neon-dark"
   use "sainnhe/gruvbox-material"
   use "sainnhe/everforest"
+  use "folke/tokyonight.nvim"
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine

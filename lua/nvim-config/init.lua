@@ -1,19 +1,18 @@
 --bo local to buffer
 --wo local to window
 --o global
- 
+--
+
 local o = vim.o
 local wo = vim.wo
 local bo = vim.bo
 
 vim.g.mapleader = ' '
 
-bo.smartindent=true
-bo.tabstop = 2
-bo.softtabstop = 2
-bo.expandtab = true
-bo.shiftwidth = 2
-o.smarttab=true
+vim.cmd "set tabstop=2"
+vim.cmd "set shiftwidth=2"
+vim.cmd "set expandtab"
+o.smarttab = true
 
 o.ignorecase = true
 o.hlsearch = true
