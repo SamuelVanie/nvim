@@ -1,7 +1,18 @@
-local status_ok, _ = pcall(require, "lspconfig")
-if not status_ok then
-  return
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = { "sumneko_lua" }
+})
+
+local on_attach = function(_, _)
+  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
+  vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, {})
+  vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 end
 
-require "lsp-config.lsp_installer"
-require("lsp-config.handlers").setup()
+require("lspconfig").sumneko_lua.setup {
+  on_attach = on_attach
+}

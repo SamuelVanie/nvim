@@ -81,8 +81,11 @@ return require 'packer'.startup(function()
   use 'nvim-treesitter/nvim-treesitter-textobjects'
 
   -- LSP
-  use "neovim/nvim-lspconfig"
-  use "williamboman/nvim-lsp-installer" -- install the server much simpler
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
 
   -- My terminal plugin
   use "akinsho/toggleterm.nvim"
