@@ -1,2 +1,2 @@
-vim.cmd "colorscheme tokyonight-night"
+vim.cmd "colorscheme neon-dark"
 vim.cmd "set guicursor=i:block"
